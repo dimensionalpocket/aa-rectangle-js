@@ -1,0 +1,37 @@
+{
+  "name": "aa-rectangle-javascript",
+  "version": "0.1.0",
+  "description": "A Javascript implementation of an Axis-Aligned Rectangle with extended features.",
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "src/aa-rectangle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloddr/aa-rectangle-javascript.git"
+  },
+  "keywords": [
+    "axis-aligned",
+    "rectangle",
+    "aabb",
+    "2d",
+    "hitbox",
+    "hurtbox",
+    "collision",
+    "game"
+  ],
+  "author": "@pauloddr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pauloddr/aa-rectangle-javascript/issues"
+  },
+  "homepage": "https://github.com/pauloddr/aa-rectangle-javascript#readme",
+  "engines": {
+    "node": "6.10.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0",
+    "performance-now": "2.1.0"
+  }
+}
