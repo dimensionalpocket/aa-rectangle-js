@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A Javascript implementation of an Axis-Aligned Rectangle with extended features.",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/eslint lib/** && nyc mocha"
   },
   "main": "lib/aa-rectangle.js",
   "repository": {
@@ -31,7 +31,10 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "eslint": "3.17.1",
+    "eslint-config-google": "^0.7.1",
     "mocha": "3.2.0",
+    "nyc": "10.1.2",
     "performance-now": "2.1.0"
   }
 }
