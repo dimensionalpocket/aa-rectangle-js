@@ -36,5 +36,11 @@
     "mocha": "3.2.0",
     "nyc": "10.1.2",
     "performance-now": "2.1.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
   }
 }
