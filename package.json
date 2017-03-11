@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "main": "src/aa-rectangle.js",
+  "main": "lib/aa-rectangle.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pauloddr/aa-rectangle-javascript.git"

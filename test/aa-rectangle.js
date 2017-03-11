@@ -1,6 +1,6 @@
 'use strict';
 
-const AARectangle = require('../src/aa-rectangle');
+const AARectangle = require('../lib/aa-rectangle');
 const expect = require('chai').expect;
 const now = require('performance-now');
 

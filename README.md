@@ -1,5 +1,10 @@
 # AARectangle - Axis-Aligned Rectangle
 
+[![Code Climate](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/gpa.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
+[![Test Coverage](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/coverage.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/coverage)
+[![Issue Count](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/issue_count.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
+
+
 ```javascript
 var box = new AARectangle(width, height, x, y);
 ```
