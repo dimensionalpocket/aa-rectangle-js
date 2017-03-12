@@ -38,115 +38,13 @@ describe('AARectangle', function () {
 
   });
 
-  // describe('#x1/y1', function () {
-
-  //   it('is x/y less half of width/height', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     expect(box.x1).to.equal(-4);
-  //     expect(box.y1).to.equal(-3);
-  //     box.x = 2;
-  //     box.y = -2;
-  //     expect(box.x1).to.equal(-2);
-  //     expect(box.y1).to.equal(-5);
-  //   });
-
-  //   it('accounts for translation', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     box.translateX = 2;
-  //     box.translateY = -2;
-  //     expect(box.x1).to.equal(-2);
-  //     expect(box.y1).to.equal(-5);
-  //     box.x = 2;
-  //     box.y = -2;
-  //     expect(box.x1).to.equal(0);
-  //     expect(box.y1).to.equal(-7);
-  //   });
-
-  //   it('accounts for orientation', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     box.flipX();
-  //     expect(box.x1).to.equal(-4);
-  //     box.translateX = 2;
-  //     expect(box.x1).to.equal(-6);
-  //     box.x = 2;
-  //     expect(box.x1).to.equal(-4);
-  //     box.flipY();
-  //     expect(box.y1).to.equal(-3);
-  //     box.translateY = 2;
-  //     expect(box.y1).to.equal(-5);
-  //     box.y = -2;
-  //     expect(box.y1).to.equal(-7);
-  //   });
-
-  // });
-
-  // describe('#x2/y2', function () {
-
-  //   it('is x/y plus half of width/height', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     expect(box.x2).to.equal(4);
-  //     expect(box.y2).to.equal(3);
-  //     box.x = 2;
-  //     box.y = -2;
-  //     expect(box.x2).to.equal(6);
-  //     expect(box.y2).to.equal(1);
-  //   });
-
-  //   it('accounts for translation', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     box.translateX = 2;
-  //     box.translateY = -2;
-  //     expect(box.x2).to.equal(6);
-  //     expect(box.y2).to.equal(1);
-  //     box.x = 2;
-  //     box.y = -2;
-  //     expect(box.x2).to.equal(8);
-  //     expect(box.y2).to.equal(-1);
-  //   });
-
-  //   it('accounts for orientation', function () {
-  //     let box = new AARectangle(8, 6, 0, 0);
-  //     box.flipX();
-  //     expect(box.x2).to.equal(4);
-  //     box.translateX = 2;
-  //     expect(box.x2).to.equal(2);
-  //     box.x = 2;
-  //     expect(box.x2).to.equal(4);
-  //     box.flipY();
-  //     expect(box.y2).to.equal(3);
-  //     box.translateY = 2;
-  //     expect(box.y2).to.equal(1);
-  //     box.y = -2;
-  //     expect(box.y2).to.equal(-1);
-  //   });
-
-  // });
-
   describe('#width/height', function () {
 
-    it('transform negative values into zero', function () {
+    it('converts negative values to zero', function () {
       let box = new AARectangle(-10, -20, 0, 0);
       expect(box.width).to.equal(0);
       expect(box.height).to.equal(0);
     });
-
-    // it('is always equal to x2-x1/y2-y1', function () {
-    //   let width = Math.floor(Math.random() * (10000 - 1) + 1);
-    //   let height = Math.floor(Math.random() * (10000 - 1) + 1);
-    //   let x = Math.floor(Math.random() * (50 - (-50)) + (-50));
-    //   let y = Math.floor(Math.random() * (50 - (-50)) + (-50));
-    //   let translateX = Math.floor(Math.random() * (50 - (-50)) + (-50));
-    //   let translateY = Math.floor(Math.random() * (50 - (-50)) + (-50));
-    //   var box = new AARectangle(width, height, x, y);
-    //   box.translateX = translateX;
-    //   box.translateY = translateY;
-    //   expect(box.x2 - box.x1).to.equal(width);
-    //   expect(box.y2 - box.y1).to.equal(height);
-    //   box.flipX();
-    //   expect(box.x2 - box.x1).to.equal(width);
-    //   box.flipY();
-    //   expect(box.y2 - box.y1).to.equal(height);
-    // });
 
   });
 
@@ -163,7 +61,7 @@ describe('AARectangle', function () {
     box4.add(box5);
 
     it('runs fast!', function () {
-      this.retries(10);
+      this.retries(10); // allows engine to optimize
       box2.flipX();
       box3.flipY();
       let time1, time2, i;
@@ -171,8 +69,7 @@ describe('AARectangle', function () {
         time1 = now();
         box4.update();
         time2 = now();
-        expect(time2 - time1).to.be.at.most(0.009); // ms
-        //console.log(time2 - time1);
+        expect(time2 - time1).to.be.at.most(0.009); // 9 nanoseconds
       }
       box2.unflipX();
       box3.unflipY();
