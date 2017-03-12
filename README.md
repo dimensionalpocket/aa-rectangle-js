@@ -3,7 +3,6 @@
 [![Build Status](https://semaphoreci.com/api/v1/pauloddr/aa-rectangle-javascript/branches/master/shields_badge.svg)](https://semaphoreci.com/pauloddr/aa-rectangle-javascript)
 [![Test Coverage](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/coverage.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/coverage)
 [![Code Climate](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/gpa.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
-[![Issue Count](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/issue_count.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
 
 ```javascript
 var box = new AARectangle(width, height, x, y);

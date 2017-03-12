@@ -60,7 +60,7 @@ describe('AARectangle', function () {
     box3.add(box4);
     box4.add(box5);
 
-    it('runs fast!', function () {
+    it('runs fast', function () {
       this.retries(10); // allows engine to optimize
       box2.flipX();
       box3.flipY();
@@ -69,7 +69,7 @@ describe('AARectangle', function () {
         time1 = now();
         box4.update();
         time2 = now();
-        expect(time2 - time1).to.be.at.most(0.009); // 9 nanoseconds
+        expect(time2 - time1).to.be.at.most(0.009); // 9 nanoseconds ~ 111,111 op/sec
       }
       box2.unflipX();
       box3.unflipY();
@@ -171,6 +171,58 @@ describe('AARectangle', function () {
       box2.update();
       expect(box2.globalX1).to.equal(11);
       expect(box2.globalX2).to.equal(13);
+    });
+
+  });
+
+  describe('#collision', function () {
+
+    it('returns true if a box is completely inside another', function () {
+      let box1 = new AARectangle(100, 100, 1, 1);
+      let box2 = new AARectangle(2, 2, -40, -40);
+      expect(box1.collision(box2)).to.equal(true);
+    });
+
+    it('returns true if sides and bases touch', function () {
+      let box1 = new AARectangle(2, 2, 1, 1);
+      let box2 = new AARectangle(2, 2, -1, -1);
+      expect(box1.collision(box2)).to.equal(true);
+    });
+
+    it('returns false if bases touch but sides do not', function () {
+      let box1 = new AARectangle(2, 2, 3, 1);
+      let box2 = new AARectangle(2, 2, -1, -1);
+      expect(box1.collision(box2)).to.equal(false);
+    });
+
+    it('returns false if sides touch but bases do not', function () {
+      let box1 = new AARectangle(2, 2, 1, 3);
+      let box2 = new AARectangle(2, 2, -1, -1);
+      expect(box1.collision(box2)).to.equal(false);
+    });
+
+    describe('with parent', function () {
+
+      it('returns true if box is dragged towards another by parent position', function () {
+        let parent = new AARectangle(0, 0, 0, 2);
+        let box1 = new AARectangle(2, 2, 1, 3);
+        let box2 = new AARectangle(2, 2, -1, -1);
+        expect(box1.collision(box2)).to.equal(false);
+        parent.add(box2); // parent position will bring box2 closer to box1
+        expect(box1.collision(box2)).to.equal(true);
+      });
+
+      it('returns true if box is dragged towards another by parent translation', function () {
+        let parent = new AARectangle(0, 0, 0, 0);
+        let box1 = new AARectangle(2, 2, 1, 3);
+        let box2 = new AARectangle(2, 2, -1, -1);
+        expect(box1.collision(box2)).to.equal(false);
+        parent.add(box2);
+        expect(box1.collision(box2)).to.equal(false);
+        parent.translateY = 2; // parent translation will bring box2 closer to box1
+        expect(box1.collision(box2)).to.equal(true);
+      });
+
     });
 
   });
