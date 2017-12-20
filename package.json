@@ -1,9 +1,9 @@
 {
   "name": "aa-rectangle-javascript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Javascript implementation of an Axis-Aligned Rectangle with extended features.",
   "scripts": {
-    "test": "./node_modules/.bin/eslint lib/** && nyc mocha"
+    "test": "standard --fix && nyc mocha"
   },
   "main": "lib/aa-rectangle.js",
   "repository": {
@@ -26,20 +26,28 @@
     "url": "https://github.com/pauloddr/aa-rectangle-javascript/issues"
   },
   "homepage": "https://github.com/pauloddr/aa-rectangle-javascript#readme",
-  "engines": {
-    "node": "6.10.0"
-  },
   "devDependencies": {
     "chai": "3.5.0",
-    "eslint": "3.17.1",
     "mocha": "3.2.0",
     "nyc": "10.1.2",
-    "performance-now": "2.1.0"
+    "performance-now": "2.1.0",
+    "standard": "*"
+  },
+  "standard": {
+    "env": "mocha",
+    "ignore": [
+      "node_modules/**"
+    ]
   },
   "nyc": {
+    "include": [
+      "index.js",
+      "lib/**/*.js"
+    ],
     "reporter": [
       "lcov",
-      "text-summary"
+      "text-summary",
+      "html"
     ]
   }
 }
