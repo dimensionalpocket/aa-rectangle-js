@@ -1,15 +1,7 @@
-engines:
+plugins:
   eslint:
     enabled: true
-  duplication:
-    enabled: true
-    config:
-      languages:
-      - javascript
+    channel: "standard"
 ratings:
   paths:
   - lib/**
-exclude_paths:
-- lib/helpers/
-- node_modules/
-- test/
