@@ -1,7 +1,7 @@
 # AARectangle
 
-[![Build Status](https://semaphoreci.com/api/v1/pauloddr/aa-rectangle-javascript/branches/master/shields_badge.svg)](https://semaphoreci.com/pauloddr/aa-rectangle-javascript)
-[![Test Coverage](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/coverage.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/coverage)
+[![Build Status](https://travis-ci.com/pauloddr/aa-rectangle-javascript.svg?branch=master)](https://travis-ci.com/pauloddr/aa-rectangle-javascript)
+[![Coverage Status](https://coveralls.io/repos/github/pauloddr/aa-rectangle-javascript/badge.svg?branch=master)](https://coveralls.io/github/pauloddr/aa-rectangle-javascript?branch=master)
 [![Code Climate](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/gpa.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
 
 ```javascript
