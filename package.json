@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/pauloddr/aa-rectangle-javascript#readme",
   "devDependencies": {
-    "chai": "3.5.0",
+    "chai": "4.1.2",
     "coveralls": "3.0.2",
     "mocha": "3.2.0",
     "nyc": "10.1.2",
