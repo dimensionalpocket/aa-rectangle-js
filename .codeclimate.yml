@@ -1,7 +1,0 @@
-plugins:
-  eslint:
-    enabled: true
-    channel: "standard"
-ratings:
-  paths:
-  - lib/**

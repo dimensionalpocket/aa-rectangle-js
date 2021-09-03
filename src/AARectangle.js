@@ -1,6 +1,6 @@
 'use strict'
 
-const {segmentCollision} = require('./collision-helpers')
+const { segmentCollision } = require('./collision-helpers')
 
 let AARectangleId = 0
 
@@ -137,4 +137,4 @@ function parseDimensionValue (value) {
   return newValue
 }
 
-module.exports = AARectangle
+module.exports.AARectangle = AARectangle
