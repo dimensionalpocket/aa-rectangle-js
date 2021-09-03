@@ -1,8 +1,6 @@
-# AARectangle
+# @dimensionalpocket/aa-rectangle
 
-[![Build Status](https://travis-ci.com/pauloddr/aa-rectangle-javascript.svg?branch=master)](https://travis-ci.com/pauloddr/aa-rectangle-javascript)
-[![Coverage Status](https://coveralls.io/repos/github/pauloddr/aa-rectangle-javascript/badge.svg?branch=master)](https://coveralls.io/github/pauloddr/aa-rectangle-javascript?branch=master)
-[![Code Climate](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript/badges/gpa.svg)](https://lima.codeclimate.com/github/pauloddr/aa-rectangle-javascript)
+[![build](https://github.com/dimensionalpocket/aa-rectangle-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/dimensionalpocket/aa-rectangle-js/actions/workflows/node.js.yml) [![Total alerts](https://img.shields.io/lgtm/alerts/g/dimensionalpocket/aa-rectangle-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/aa-rectangle-js/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dimensionalpocket/aa-rectangle-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/aa-rectangle-js/context:javascript)
 
 ```javascript
 var box = new AARectangle(width, height, x, y);
@@ -14,10 +12,10 @@ It is tailored for usage in 2D games that require a box management system, for h
 
 ## Features
 
-* Hierarchy: add boxes inside boxes;
-* Horizontal and vertical flipping;
-* Translation along X or Y axis;
-* Global positioning based on all of the above.
+* Hierarchy: add boxes inside boxes
+* Horizontal and vertical flipping
+* Translation along X or Y axis
+* Global positioning based on all of the above
 
 ### What about Rotation?
 
@@ -101,10 +99,13 @@ console.log(box3.globalX); // 8 (-2+10+0)
 console.log(box3.globalY); // -16 (4-20-0)
 ```
 
-## TODO/Wishlist
+## Installation
 
-* Viewport methods to return the visible area of a box, when it's larger than its parent box, or is moved out of the bounds of the parent.
-* Browserify support to allow component usage in browsers.
+Install the package directly from GitHub (X.Y.Z == release tag):
+
+```shell
+npm i -S -E github:dimensionalpocket/aa-rectangle-js#X.Y.Z
+```
 
 ## License
 

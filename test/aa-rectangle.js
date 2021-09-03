@@ -1,7 +1,7 @@
 'use strict'
 
-const AARectangle = require('../lib/aa-rectangle')
-const expect = require('chai').expect
+const { AARectangle } = require('../src/AARectangle')
+const { expect } = require('@dimensionalpocket/development')
 const now = require('performance-now')
 
 describe('AARectangle', function () {
@@ -52,6 +52,7 @@ describe('AARectangle', function () {
     box3.add(box4)
     box4.add(box5)
 
+    // TODO: move to benchmark testing
     it('runs for less than 10 nanoseconds', function () {
       let box2 = new AARectangle(2, 2, 10, -20)
       let box3 = new AARectangle(3, 3, -2, 4)

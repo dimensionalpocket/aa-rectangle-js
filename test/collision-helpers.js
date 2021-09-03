@@ -1,7 +1,7 @@
 'use strict'
 
-const {segmentCollision} = require('../lib/collision-helpers')
-const expect = require('chai').expect
+const { segmentCollision } = require('../src/collision-helpers')
+const { expect } = require('@dimensionalpocket/development')
 
 describe('CollisionHelpers', function () {
   describe('.segmentCollision', function () {
