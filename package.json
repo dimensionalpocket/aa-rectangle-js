@@ -4,7 +4,6 @@
   "description": "A Javascript implementation of an Axis-Aligned Rectangle with extended features.",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "test:ci": "NODE_ENV=test mocha",
     "lint": "standardx --fix --verbose",
     "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/default.js"
   },
@@ -30,9 +29,9 @@
   },
   "homepage": "https://github.com/dimensionalpocket/aa-rectangle-js#readme",
   "devDependencies": {
-    "performance-now": "2.1.0",
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.4.0",
-    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.1"
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.5.2",
+    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4",
+    "performance-now": "2.1.0"
   },
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
@@ -46,7 +45,7 @@
     "colors": true
   },
   "c8": {
-    "all": true,
+    "extends": "./node_modules/@dimensionalpocket/development/c8/default.json",
     "include": [
       "index.js",
       "src"
