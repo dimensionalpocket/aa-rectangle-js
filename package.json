@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/dimensionalpocket/aa-rectangle-js#readme",
   "devDependencies": {
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.7.0",
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#1.3.0",
     "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.3.3",
     "performance-now": "2.1.0"
   },
